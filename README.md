@@ -12,8 +12,7 @@ Now, with a bit of industry expereince behind me, I'm hoping to make this more p
 
 This is an application for creating wish lists for just about any occasion - weddings, baby showers, birthday parties, you name it.
 
-
-# Getting Started with Create React App
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
