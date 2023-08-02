@@ -1,0 +1,15 @@
+import React from "react";
+import InputField from "../components/InputField";
+
+export default function SignUp() {
+    return <>
+    <h1>Sign Up</h1>
+    <InputField name="email" label="Email" />
+    <InputField name="password" label="Password" />
+    <InputField name="confirmPassword" label="Confirm Password" />
+    <InputField name="firstName" label="First Name" />
+    <InputField name="lastName" label="Last Name" />
+
+
+    </>
+}
