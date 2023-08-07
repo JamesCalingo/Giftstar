@@ -5,13 +5,16 @@ import App from './App.jsx'
 import './index.css'
 import MainPage from './pages/MainPage.jsx'
 import SignUp from './pages/SignUp.jsx'
+import Account from './pages/Account.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
   element: <MainPage />
 },
 {path: "/signup",
-element: <SignUp />}])
+element: <SignUp />},
+{path: "/account",
+element: <Account />}])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

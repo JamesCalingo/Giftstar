@@ -10,7 +10,7 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-evenly'
     },
-   
+
     logIn: {
         marginLeft: 30
     },
@@ -34,7 +34,9 @@ export default function MainPage() {
                 <InputField name="email" type="email" label="Email" />
                 <InputField name="password" type="password" label="Password" />
 
-                <button>Sign in</button>
+                <a href="/account">
+                    <button>Sign in</button>
+                </a>
                 <p><a href="/signup">Create account</a></p>
             </div>
             <div className="box">
