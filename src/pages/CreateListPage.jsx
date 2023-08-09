@@ -6,13 +6,20 @@ export default function CreateListPage() {
         <h1>Create New List</h1>
 
         <div>
-        <InputField name="name" label="Name" />
-        <InputField name="occasion" label="This list is for a:" />
-        {/* This one's different since it's multiline */}
-        <label htmlFor="description">Description</label>
-        <input name="description" />
+            <div className="card">
+            <InputField name="name" label="Name" />
+            <InputField name="occasion" label="This list is for a:" />
+            {/* This one's different since it's multiline */}
+            <label htmlFor="description">Description</label> <br />
+            <input name="description" />
+            </div>
 
-        <button>Create List</button>
+            <div>
+
+            <a href="/list">
+                <button>Create List</button>
+            </a>
+            </div>
         </div>
     </>
 }
