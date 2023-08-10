@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #242424;
+  background-color: #9f6713;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #8b6f19;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -58,7 +58,7 @@ button:focus-visible {
 .card {
   background-color: white;
   color: black;
-  margin: 10px 10%;
+  /* margin: 10px 10%; */
   padding: 10px;
   border-radius: 2% 2%;
 

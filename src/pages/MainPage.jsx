@@ -12,7 +12,7 @@ const styles = {
     },
 
     logIn: {
-        marginLeft: 30
+       margin: 0
     },
     inputField: {
         marginBottom: 10
