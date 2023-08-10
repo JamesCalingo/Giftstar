@@ -12,7 +12,7 @@ const styles = {
     },
 
     logIn: {
-        marginLeft: 30
+       margin: 0
     },
     inputField: {
         marginBottom: 10
@@ -29,7 +29,7 @@ export default function MainPage() {
         </div>
 
         <div style={styles.content}>
-            <div className="box" style={styles.logIn}>
+            <div className="card" style={styles.logIn}>
                 <p>Sign in</p>
                 <InputField name="email" type="email" label="Email" />
                 <InputField name="password" type="password" label="Password" />
@@ -39,7 +39,7 @@ export default function MainPage() {
                 </a>
                 <p><a href="/signup">Create account</a></p>
             </div>
-            <div className="box">
+            <div className="card">
                 <h3>Welcome!</h3>
                 <p>Whether you're planning something big or small, let Giftstar help you!</p>
             </div>

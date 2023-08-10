@@ -9,6 +9,7 @@ import SignUp from './pages/SignUpPage.jsx'
 import Account from './pages/AccountPage.jsx'
 import CreateListPage from './pages/CreateListPage.jsx'
 import ListPage from './pages/ListPage.jsx'
+import Navbar from './components/Navbar.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -33,6 +34,7 @@ const router = createBrowserRouter([{
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Navbar />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
