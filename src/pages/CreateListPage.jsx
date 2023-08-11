@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "../components/InputField";
 
 export default function CreateListPage() {
-    return <>
+    return <div className="container">
         <h1>Create New List</h1>
 
         <div>
@@ -21,5 +21,5 @@ export default function CreateListPage() {
             </a>
             </div>
         </div>
-    </>
+    </div>
 }

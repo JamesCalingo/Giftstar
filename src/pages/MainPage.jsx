@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import InputField from "../components/InputField";
+import SignUpModal from "../components/SignUpModal";
 
 const styles = {
     header: {
@@ -8,11 +9,16 @@ const styles = {
     content: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-between',
+        marginBottom: 30
     },
 
     logIn: {
-       margin: 0
+       width: '25%',
+    //    marginLeft: 0
+    },
+    search: {
+        width: '70%'
     },
     inputField: {
         marginBottom: 10
@@ -21,29 +27,38 @@ const styles = {
 
 export default function MainPage() {
 
+    const[isModalHidden, setIsModalHidden] = useState(true)
+
     return <div className="container">
         <div style={styles.header}>
 
             <h1 style={styles.header}>Welcome to Giftstar!</h1>
             <p>Create your perfect wishlist for any occasion!</p>
         </div>
-
+        {/* <SignUpModal hidden={isModalHidden} /> */}
         <div style={styles.content}>
             <div className="card" style={styles.logIn}>
-                <p>Sign in</p>
+                <h3>Sign in</h3>
                 <InputField name="email" type="email" label="Email" />
                 <InputField name="password" type="password" label="Password" />
 
                 <a href="/account">
                     <button>Sign in</button>
                 </a>
-                <p><a href="/signup">Create account</a></p>
+                <p onClick={() => {setIsModalVisible(!isModalHidden);console.log(isModalVisible)}}>Create account</p>
             </div>
-            <div className="card">
-                <h3>Welcome!</h3>
-                <p>Whether you're planning something big or small, let Giftstar help you!</p>
+            <div className="card" style={styles.search}>
+                <h3>Find a list</h3>
+                <p>If someone is using our site for their gift list, you can search for it here! Simply search for their name or the name of their list, and we'll do our best to find it for you.</p>
+                <input type="search" name="search" /> <br />
+                <button>Search</button>
             </div>
         </div>
+        <div className="card">
+                <h3>Welcome!</h3>
+                <p>Whether you're planning something big or small, let Giftstar help you!</p>
+                <p>This is a thing</p>
+            </div>
     </div>
 }
 
