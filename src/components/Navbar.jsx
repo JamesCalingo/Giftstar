@@ -6,7 +6,7 @@ const styles = {
         height: '3%',
         backgroundColor: 'white',
         color: 'black',
-        display: 'flex'
+        display: 'flex',
     }
 }
 

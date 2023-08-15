@@ -7,7 +7,7 @@ export default function CreateListPage() {
 
         <div>
             <div className="card">
-            <InputField name="name" label="Name" />
+            <InputField name="name" label="Name" required/>
             <InputField name="occasion" label="This list is for a:" />
             {/* This one's different since it's multiline */}
             <label htmlFor="description">Description</label> <br />

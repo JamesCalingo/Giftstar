@@ -40,8 +40,8 @@ export default function MainPage() {
         <div style={styles.content}>
             <div className="card" style={styles.logIn}>
                 <h3>Sign in</h3>
-                <InputField name="email" type="email" label="Email" />
-                <InputField name="password" type="password" label="Password" />
+                <InputField name="email" type="email" label="Email" required/>
+                <InputField name="password" type="password" label="Password" required/>
 
                 <a href="/account">
                     <button>Sign in</button>

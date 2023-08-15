@@ -3,7 +3,8 @@ import InputField from "./InputField";
 
 export default function SignUpModal(props) {
     return  <div className="card modal" hidden={props.hidden}>
-        <h2>Sign Up</h2>
+        <h2>You're one step away from your perfect wishlist - Sign Up now!</h2>
+        <p>(All fields are required)</p>
 
             <InputField name="email" type="email" label="Email" />
             <InputField name="password" type="password" label="Password" />
