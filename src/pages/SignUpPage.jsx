@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "../components/InputField";
 
 export default function SignUp() {
-    return <>
+    return <div className="container">
         <h1>Sign Up</h1>
         <div className="card">
 
@@ -17,5 +17,5 @@ export default function SignUp() {
             </a>
         </div>
 
-    </>
+    </div>
 }
