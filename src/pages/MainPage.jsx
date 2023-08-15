@@ -29,13 +29,14 @@ export default function MainPage() {
 
     const[isModalHidden, setIsModalHidden] = useState(true)
 
-    return <div className="container">
+    return <div>
+    <div className="container">
         <div style={styles.header}>
 
             <h1 style={styles.header}>Welcome to Giftstar!</h1>
             <p>Create your perfect wishlist for any occasion!</p>
         </div>
-        {/* <SignUpModal hidden={isModalHidden} /> */}
+        <SignUpModal hidden={isModalHidden} cancelModal={() => setIsModalHidden(true)} />
         <div style={styles.content}>
             <div className="card" style={styles.logIn}>
                 <h3>Sign in</h3>
@@ -45,7 +46,7 @@ export default function MainPage() {
                 <a href="/account">
                     <button>Sign in</button>
                 </a>
-                <p onClick={() => {setIsModalVisible(!isModalHidden);console.log(isModalVisible)}}>Create account</p>
+                <p onClick={() => {setIsModalHidden(false);console.log(isModalHidden)}}>Create account</p>
             </div>
             <div className="card" style={styles.search}>
                 <h3>Find a list</h3>
@@ -59,6 +60,7 @@ export default function MainPage() {
                 <p>Whether you're planning something big or small, let Giftstar help you!</p>
                 <p>This is a thing</p>
             </div>
+    </div>
     </div>
 }
 

@@ -5,7 +5,8 @@ import AddItemModal from "../components/AddItemModal";
 export default function ListPage() {
     return <div className="container">
     <h2>List Title</h2>
-    <p>list</p>
+    <p>List description</p>
+    <ListItem />
     <button>Add Item</button>
     </div>
 }
