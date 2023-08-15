@@ -6,7 +6,8 @@ export default function AddItemModal(props) {
     <div className="card" hidden={props.hidden}>
         <InputField name="name" label="Name" required/>
         <InputField name="link" label="Link to Product" required/>
-        <label htmlFor="description">Why </label>
+        <label htmlFor="description">A brief description of why you'd like this (optional)</label>
+        <input name="description" multiline />
         <InputField name="image" label="Image" type="image" />
         <button>Add</button>
         </div>

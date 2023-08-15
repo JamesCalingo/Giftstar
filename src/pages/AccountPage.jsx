@@ -1,5 +1,6 @@
 import React from "react";
 import ListCard from "../components/ListCard";
+import NoData from "../components/NoData";
 
 const dummyUser = {
     firstName: "Bob",
@@ -24,7 +25,7 @@ export default function AccountPage() {
         <h1>Hi {dummyUser.firstName}!</h1>
 
         {coinFlip ? dummyData.map((elem, index) => <ListCard key={index} title={elem.title} link={elem.link} />) :
-            <p>You have no lists.</p>}
+            <NoData message="You have no lists." />}
         <a href="/createlist"><button>Create New List</button></a>
     </div>
 

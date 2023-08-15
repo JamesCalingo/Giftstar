@@ -15,7 +15,6 @@ const styles = {
 
     logIn: {
        width: '25%',
-    //    marginLeft: 0
     },
     search: {
         width: '70%'

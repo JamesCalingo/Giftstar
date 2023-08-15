@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = {
     listCard: {
-        margin: 20
+        // margin: 20
     }
 }
 
