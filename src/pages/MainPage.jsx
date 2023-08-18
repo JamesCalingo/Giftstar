@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputField from "../components/InputField";
 import SignUpModal from "../components/SignUpModal";
+import { handleSetValue } from "../utils/utils";
 
 const styles = {
     header: {
@@ -32,15 +34,14 @@ export default function MainPage() {
         password: ''
     })
 
-    function handleSetValue(value, field) {
-        setUser({ ...user, [field]: value })
-    }
+    const navigate = useNavigate()
 
     function onClickLogin() {
         if(!user.email || !user.password){
             alert("Please enter an email and password.")
             return
         }
+        navigate("/account")
     }
 
     return <div>
@@ -57,16 +58,16 @@ export default function MainPage() {
                     <div id="alert"></div>
                     <div>
                         <label htmlFor="email">Email*</label> <br />
-                        <input name="email" id="email" type="email" value={user.email} onChange={(event) => handleSetValue(event.target.value, "email")} />
+                        <input name="email" id="signInEmail" type="email" value={user.email} onChange={(event) => handleSetValue(user, setUser, event.target.value, "email")} />
                     </div>
                     <div>
                         <label htmlFor="password">Password</label> <br />
-                        <input name="password" id="password" type="password" value={user.password} onChange={(event) => handleSetValue(event.target.value, "password")} />
+                        <input name="password" id="signInPassword" type="password" value={user.password} onChange={(event) => handleSetValue(user, setUser, event.target.value, "password")} />
                     </div>
 
-                    <a href="/account">
-                        <button>Sign in</button>
-                    </a>
+                    
+                        <button onClick={() => onClickLogin()}>Sign in</button>
+                    
                     <p onClick={() => setIsModalHidden(false)}>Create account</p>
                 </div>
                 <div className="card" style={styles.search}>
@@ -79,7 +80,13 @@ export default function MainPage() {
             <div className="card">
                 <h3>Welcome!</h3>
                 <p>Whether you're planning something big or small, let Giftstar help you!</p>
-                <p>This is a thing</p>
+                <p>You can add items from all over the internet to your wish list here:
+                </p>
+                <ul>
+                    <li>That thing you found on Etsy</li>
+                    <li>Hard to find memoribilia only available in your favorite team's/band's official store</li>
+                </ul>
+                <p>Now you can have them all in one place!</p>
             </div>
         </div>
     </div>
