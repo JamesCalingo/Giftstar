@@ -67,13 +67,15 @@ button:focus-visible {
   margin-bottom: 20px;
 }
 
+.centered {
+  text-align: center;
+}
+
 .modal {
   position: fixed;
   left: 30%;
   width: 40%;
-  text-align: center;
-  /* border-width: 2px; */
-  /* border-color: #213547; */
+  padding: 10px;
   background: lightgrey
 }
 
