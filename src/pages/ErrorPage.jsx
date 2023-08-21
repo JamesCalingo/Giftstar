@@ -2,8 +2,10 @@ import React from "react";
 
 export default function ErrorPage() {
     return <div className="container">
-    <h1>Um...hi.</h1>
+    <h1>404'D!</h1>
 
-    <p>It would seem that you have tried to access something that does not exist. So sorry.</p>
+    <p style={{textAlign: 'center'}}>Um...hi.<br />It would seem that you have tried to access something that does not exist. So sorry.</p>
+
+
     </div>
 }

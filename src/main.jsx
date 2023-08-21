@@ -10,6 +10,7 @@ import Account from './pages/AccountPage.jsx'
 import CreateListPage from './pages/CreateListPage.jsx'
 import ListPage from './pages/ListPage.jsx'
 import Navbar from './components/Navbar.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -30,7 +31,12 @@ const router = createBrowserRouter([{
 {
   path: "/createlist",
   element: <CreateListPage />
-}])
+},
+{
+  path: "*",
+  element: <ErrorPage />
+}
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
