@@ -29,6 +29,7 @@ const styles = {
 export default function MainPage() {
 
     const [isModalHidden, setIsModalHidden] = useState(true)
+    const [token, setToken] = useState("e")
     const [user, setUser] = useState({
         email: '',
         password: ''
@@ -37,7 +38,7 @@ export default function MainPage() {
     const navigate = useNavigate()
 
     function onClickLogin() {
-        if(!user.email || !user.password){
+        if (!user.email || !user.password) {
             alert("Please enter an email and password.")
             return
         }
@@ -53,23 +54,24 @@ export default function MainPage() {
             </div>
             <SignUpModal hidden={isModalHidden} cancelModal={() => setIsModalHidden(true)} />
             <div style={styles.content}>
-                <div className="card" style={styles.logIn}>
-                    <h3>Sign in</h3>
-                    <div id="alert"></div>
-                    <div>
-                        <label htmlFor="email">Email*</label> <br />
-                        <input name="email" id="signInEmail" type="email" value={user.email} onChange={(event) => handleSetValue(user, setUser, event.target.value, "email")} />
-                    </div>
-                    <div>
-                        <label htmlFor="password">Password</label> <br />
-                        <input name="password" id="signInPassword" type="password" value={user.password} onChange={(event) => handleSetValue(user, setUser, event.target.value, "password")} />
-                    </div>
+                {token ? null :
+                    <div className="card" style={styles.logIn}>
+                        <h3>Sign in</h3>
+                        <div id="alert"></div>
+                        <div>
+                            <label htmlFor="email">Email*</label> <br />
+                            <input name="email" id="signInEmail" type="email" value={user.email} onChange={(event) => handleSetValue(user, setUser, event.target.value, "email")} />
+                        </div>
+                        <div>
+                            <label htmlFor="password">Password</label> <br />
+                            <input name="password" id="signInPassword" type="password" value={user.password} onChange={(event) => handleSetValue(user, setUser, event.target.value, "password")} />
+                        </div>
 
-                    
                         <button onClick={() => onClickLogin()}>Sign in</button>
-                    
-                    <p onClick={() => setIsModalHidden(false)}>Create account</p>
-                </div>
+
+                        <p onClick={() => setIsModalHidden(false)}>Create account</p>
+                    </div>
+                }
                 <div className="card" style={styles.search}>
                     <h3>Find a list</h3>
                     <p>If someone you know is using our site for their gift list, you can search for it here! Simply search for their name or the name of their list, and we'll do our best to find it for you.</p>

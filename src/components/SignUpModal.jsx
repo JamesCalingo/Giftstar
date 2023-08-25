@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { handleSetValue } from "../utils/utils";
 
 const styles = {
@@ -16,9 +17,7 @@ export default function SignUpModal(props) {
     })
     const [confirmPassword, setConfirmPassword] = useState("")
 
-    // function handleSetValue(value, field) {
-    //     setNewUser({ ...newUser, [field]: value })
-    // }
+    const navigate = useNavigate()
 
     function onClickSignUp() {
         if (!newUser.email || !newUser.password || !newUser.firstName || !newUser.lastName || !confirmPassword) {
@@ -29,8 +28,8 @@ export default function SignUpModal(props) {
             alert("Your passwords don't match. Please check your passwords and try again.")
             return
         }
-        alert("Everything looks good!")
         console.log(newUser)
+        navigate("/account")
     }
     return <div className="card modal" hidden={props.hidden}>
         <div className="centered">
